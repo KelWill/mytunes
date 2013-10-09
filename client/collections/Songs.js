@@ -2,5 +2,5 @@
 var Songs = Backbone.Collection.extend({
 
   model: Song
-
+  //this.on('play', function(){...})
 });

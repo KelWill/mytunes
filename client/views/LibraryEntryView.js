@@ -7,11 +7,11 @@ var LibraryEntryView = Backbone.View.extend({
 
   events: {
     'click': function() {
-      this.model.play();
+      this.model.play();    //the model that the library (Songs) collection uses is Song so it will call song.play()
     }
   },
 
-  render: function(){
+  render: function(){   //renders using a simple table template
     return this.$el.html(this.template(this.model.attributes));
   }
 
