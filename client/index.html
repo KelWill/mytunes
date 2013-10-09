@@ -22,7 +22,8 @@
     <script>
       $(function(){
         // set up model objects
-        var library = new Songs(songData);  //Songs is a collection constructor of models of the type Song so library is a collection instance that will have song models that are constructed using the data in songData. 
+        var library = new Songs(songData);  //Songs is a collection constructor of models of the type Song so library is a collection instance that will have song models that are constructed using the data in songData (which is a javascript object with url, title and artist) -- check--this should have a length of four
+        console.log(library)
         var app = new App({library: library});
 
         // build a view for the top level of the whole app
