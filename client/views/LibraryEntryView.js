@@ -7,7 +7,7 @@ var LibraryEntryView = Backbone.View.extend({
 
   events: {
     'click': function() {
-      this.model.play();    //the model that the library (Songs) collection uses is Song so it will call song.play()
+      SongQueue.add(this.model);
     }
   },
 
@@ -16,3 +16,5 @@ var LibraryEntryView = Backbone.View.extend({
   }
 
 });
+
+//another click event needs to be bound to library entry view
