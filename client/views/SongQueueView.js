@@ -1,11 +1,6 @@
 // SongQueueView.js - Defines a backbone view class for the song queue.
 var SongQueueView = Backbone.View.extend({
 
-  // events: {
-  //   "add": "render",
-
-  // }
-
   initialize: function() {
     this.collection.on('add', function(){this.render();}, this);
     this.collection.on('remove', function(){this.render();}, this);
@@ -13,16 +8,16 @@ var SongQueueView = Backbone.View.extend({
   },
 
   render: function() {
-    // var self = this;
-    console.log("rendered");
+    console.log('SongQueuView render');
     this.$el = $('<div class="song-queue"><h4>Song Queue</h4></div>');
     this.collection.forEach(function(song){
       var aSong = new SongQueueEntryView({model: song});
       aSong.render();
       this.$el.append(aSong.$el);
     }, this);
+    $('.song-queue').html(this.$el);
     //go through each item in the collection and append to this.$el
-    return this.$el;
+    return this;
   }
   // ,this.collection.on('add', function(){....render....})
   // this.collection.on('remove', function(){...render...})
