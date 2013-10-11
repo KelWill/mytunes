@@ -11,7 +11,6 @@ var AppView = Backbone.View.extend({
   },
 
   render: function(){
-    this.songQueueView.render();
     return this.$el.html([
       this.playerView.$el,
       new LibraryView({collection: this.model.get('library')}).render(),

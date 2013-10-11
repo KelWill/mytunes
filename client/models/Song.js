@@ -1,4 +1,3 @@
-// Song.js - Defines a backbone model class for songs.
 var Song = Backbone.Model.extend({
 
   play: function(){
